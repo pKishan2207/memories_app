@@ -14,5 +14,5 @@ Setup:
 
 Deployment:
 
-- The server side is deployed on Heroku app - https://memories-project-kishan.herokuapp.com/
+- The server side is deployed on Heroku app - https://memories-app-kishan.herokuapp.com/
 - The client side is deployed on Netlify app - https://memories-app-kishan.netlify.app/

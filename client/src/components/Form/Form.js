@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
@@ -16,10 +16,10 @@ const Form = ({ currentId, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
 
-  const clear = () => {
+  const clear = useCallback(() => {
     setCurrentId(0);
     setPostData({ title: '', message: '', tags: [], selectedFile: '' });
-  };
+  }, [setCurrentId, setPostData]);
 
   useEffect(() => {
     if (!post?.title) clear();
